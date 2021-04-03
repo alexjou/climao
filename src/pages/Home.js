@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect } from "react";
 
 import { getAddress, getWeather } from "../services/axios";
 import types from "../constants/types";
@@ -153,7 +153,7 @@ function Home() {
   }
 
   //Mapa
-  const libraries = ["places"];
+  const libraries = useState(["places"]);
   const mapContainerStyle = {
     height: "50vh",
     width: "50vw",
@@ -184,13 +184,13 @@ function Home() {
   }, []);
   //Mapa
 
-  function getNewLocation(lat, long) {
-    getWeather(lat, long).then((doc) => {
+  function getNewLocation(lat, lng) {
+    getWeather(lat, lng).then((doc) => {
       setWeather(doc.weather[0]);
       setOption(doc.main);
     });
 
-    getAddress(lat, long).then((data) =>
+    getAddress(lat, lng).then((data) =>
       setAddress(data.data.results[0].formatted_address)
     );
   }
