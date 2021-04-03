@@ -44,9 +44,10 @@ Web
 
 - [ReactJs](https://pt-br.reactjs.org/)
 - [Styled-Components](https://styled-components.com/)
-- [Material-UI](https://material-ui.com/pt/)
-- [Axios](https://github.com/axios/axios)
 - [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces/)
+- [Material-UI](https://material-ui.com/pt/)
+- [Axios](https://github.com/axios/axios) 
+- [Open Weather Map - api](https://openweathermap.org/api)
 - [React Google Maps - api](https://www.npmjs.com/package/@react-google-maps/api)
 - [Use Places Autocomplete](https://www.npmjs.com/package/use-places-autocomplete)
 
