@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+<h1 align="center">Climão</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">Site responsivo para mostrar os dados meteorológicos da sua localização, mostrando seu endereço na tela e de qualquer lugar do mundo</p>
 
-## Available Scripts
+<h1 align="center">
+Web
+  <img
+    alt="Web"
+    src="/src/assets/screenshots/web.gif"
+  />
+  Mobile
+  <img
+    alt="Mobile"
+    src="/src/assets/screenshots/web.gif"
+    height=400
+    width=400
+  />
+</h1>
 
-In the project directory, you can run:
+# Tabela de conteúdos
 
-### `yarn start`
+<!--ts-->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Tabela de Conteudo](#tabela-de-conteudo)
+- [Funcionalidades](#Funcionalidades)
+- [Tecnologias](#Tecnologias)
+- [Como usar](#como-usar)
+- [Decisões e Problemas](https://github.com/Tsugami/Softwrap/issues/1)
+<!--te-->
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Funcionalidades
 
-### `yarn test`
+- [x] Pegar localização atual, mostrando seu endereço
+- [x] Mostrar todos os dados meteorológicos, de acordo com as coordenadas
+- [x] Imagem animada de acordo com o tempo e a hora(exemplo: se for dia, sem chuva(céu limpo), aparece sol.)
+- [x] Pegar dados meteorológicos do mundo inteiro
+- [x] Botão com refresh
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Tecnologias
 
-### `yarn build`
+- [ReactJs](https://pt-br.reactjs.org/)
+- [Styled-Components](https://styled-components.com/)
+- [Material-UI](https://material-ui.com/pt/)
+- [Axios](https://github.com/axios/axios)
+- [Yarn Workspaces](https://classic.yarnpkg.com/en/docs/workspaces/)
+- [React Google Maps - api](https://www.npmjs.com/package/@react-google-maps/api)
+- [Use Places Autocomplete](https://www.npmjs.com/package/use-places-autocomplete)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Como usar
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+# Clone o repositório
+$ git clone https://github.com/alexjou/climao
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Entre na pasta
+$ cd climao
 
-### `yarn eject`
+# Instale as dependencias
+$ yarn install
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Inicie o site
+$ yarn start
+```
