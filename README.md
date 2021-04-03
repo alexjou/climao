@@ -8,6 +8,8 @@ Web
     alt="Web"
     src="/src/assets/screenshots/web.gif"
   />
+  </h1>
+  <h2 align="center">
   Mobile
   <img
     alt="Mobile"
@@ -15,7 +17,7 @@ Web
     height=400
     width=400
   />
-</h1>
+</h2>
 
 # Tabela de conteúdos
 
