@@ -9,15 +9,17 @@ Web
     src="/src/assets/screenshots/web.gif"
   />
   </h1>
-  <h2 align="center">
+  <h1 align="center">
   Mobile
+  </h1>
+  <h1 align="center">
   <img
     alt="Mobile"
     src="/src/assets/screenshots/mobile.gif"
     height=400
     width=400
   />
-</h2>
+</h1>
 
 # Tabela de conteúdos
 
