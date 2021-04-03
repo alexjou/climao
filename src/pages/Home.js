@@ -58,6 +58,12 @@ const Section = styled.div`
     }
   }
 
+  h2 {
+    @media (max-width: 768px) {
+      padding: 5%;
+    }
+  }
+
   @media (max-width: 768px) {
     width: 80%;
   }
@@ -155,8 +161,8 @@ function Home() {
   //Mapa
   const libraries = useState(["places"]);
   const mapContainerStyle = {
-    height: "50vh",
-    width: "50vw",
+    width: "50%",
+    height: "50%",
   };
   const options = {
     disableDefaultUI: true,
