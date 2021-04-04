@@ -1,6 +1,6 @@
 <h1 align="center">Climão</h1>
 
-<p align="center">Site responsivo para mostrar os dados meteorológicos da sua localização, mostrando seu endereço na tela e de qualquer lugar do mundo</p>
+<p align="center">Site responsivo para mostrar os dados meteorológicos da sua localização ou e de qualquer lugar do mundo</p>
 
 <h1 align="center">
 Web
