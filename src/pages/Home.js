@@ -124,10 +124,10 @@ const Maps = styled.div`
 
 function Home() {
   const [location, setLocation] = useState(false);
-  const [myLocation, setMyLocation] = useState("");
   const [weather, setWeather] = useState(false);
   const [address, setAddress] = useState(false);
   const [option, setOption] = useState(false);
+  const [center, setCenter] = React.useState({});
   const [stateMap, setStateMap] = useState({
     checked: false,
   });
@@ -161,16 +161,12 @@ function Home() {
   //Mapa
   const libraries = useState(["places"]);
   const mapContainerStyle = {
-    width: "50%",
-    height: "50%",
+    height: "50vh",
+    width: "50vw",
   };
   const options = {
     disableDefaultUI: true,
     zoomControl: true,
-  };
-  const center = {
-    lat: myLocation.latitude,
-    lng: myLocation.longitude,
   };
   useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
@@ -186,7 +182,14 @@ function Home() {
     mapRef.current.panTo({ lat, lng });
     mapRef.current.setZoom(14);
     getNewLocation(lat, lng);
-    window.scrollTo(0, 100);
+    window.scrollTo(0, 200);
+  }, []);
+
+  const onMapClick = React.useCallback((e) => {
+    const lat = e.latLng.lat();
+    const lng = e.latLng.lng();
+    getNewLocation(lat, lng);
+    window.scrollTo(0, 200);
   }, []);
   //Mapa
 
@@ -206,7 +209,10 @@ function Home() {
     navigator.geolocation.getCurrentPosition((position) => {
       //Confirmando que sua localização foi pega
       setLocation(true);
-      setMyLocation(position?.coords);
+      setCenter({
+        lat: position?.coords.latitude,
+        lng: position?.coords.longitude,
+      });
 
       //Pegando os dados meteorólogicos da sua coordenada
       getWeather(position?.coords.latitude, position?.coords.longitude).then(
@@ -269,7 +275,7 @@ function Home() {
                 color="primary"
               />
             }
-            label="Quer ver a meteorologia de outro lugar?"
+            label="Quer ver a meteorologia de qualquer lugar do mundo?"
             labelPlacement="start"
           />
 
@@ -287,6 +293,7 @@ function Home() {
                 center={center}
                 options={options}
                 onLoad={onMapLoad}
+                onClick={onMapClick}
               ></GoogleMap>
             </Maps>
           )}
