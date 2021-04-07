@@ -29,7 +29,6 @@ Web
 - [Funcionalidades](#Funcionalidades)
 - [Tecnologias](#Tecnologias)
 - [Como usar](#como-usar)
-- [Decisões e Problemas](https://github.com/Tsugami/Softwrap/issues/1)
 <!--te-->
 
 ### Funcionalidades
