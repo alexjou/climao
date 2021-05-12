@@ -17,7 +17,7 @@ Web
     alt="Mobile"
     src="/src/assets/screenshots/mobile.gif"
     height=400
-    width=400
+    width=200
   />
 </h1>
 
